@@ -1,0 +1,129 @@
+.card-icon {
+  font-size: 30px; 
+  margin-bottom: 10px; 
+  color: #F70776; 
+}
+
+.card:hover .card-icon {
+  color: white; 
+  transform: scale(1.05); 
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-section {
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 120px;
+  height: 140px;
+  display: flex;
+  flex-direction: column; /* Mengatur elemen secara vertikal */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f9f9f9; /* Default color */
+  border: 2px solid #b807a0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  color: #C3195D;
+  transform: translateY(50px);
+  opacity: 0;
+  text-decoration: none;
+}
+
+.category-title {
+  position: relative;
+  transition: transform 1s ease, opacity 0.7s ease;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.card.visible, .category-title.visible {
+  transition: transform 1s ease, opacity 0.7s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-content {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-badge {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  background: green;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.maintenance-badge {
+  position: absolute;
+  top: -5px;
+  background: #C3195D;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 12px;
+}
+
+.card:hover {
+  background-color: #C3195D;
+  color: white;
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-container .card {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    justify-content: center;
+  }
+
+  .card {
+    width: 100px;
+    height: 120px;
+  }
+}

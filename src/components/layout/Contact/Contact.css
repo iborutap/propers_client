@@ -1,0 +1,84 @@
+.contact-container {
+  margin-top: 80px; /* Memberikan jarak dari navbar */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Responsif */
+}
+
+.profile {
+  background-color: white;
+  text-align: center;
+  border: 1px solid #fa0d0d;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 250px; /* Lebar tetap */
+  height: 300px; /* Tinggi tetap */
+  overflow: hidden; /* Potong konten jika melebihi kotak */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spasi antara elemen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 1s ease-in; /* Menambahkan transisi untuk opacity */
+  opacity: 0; /* Awalnya elemen tidak terlihat */
+  animation: fadeIn 1s ease-in-out forwards; /* Animasi fade-in */
+}
+
+/* Efek saat hover */
+.profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Menambahkan animasi fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Mulai dari bawah */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posisi normal */
+  }
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto; /* Supaya gambar berada di tengah */
+}
+
+.instagram-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  color: white;
+  background-color: #e1306c; /* Warna khas Instagram */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.instagram-link:hover {
+  background-color: #b7184a;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile {
+    max-width: 100%;
+  }
+}

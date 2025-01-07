@@ -1,0 +1,371 @@
+.filter-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-container label {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.filter-container select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.filter-container select:focus {
+  outline: none;
+  border-color: #F70776;
+  box-shadow: 0 0 5px rgba(255, 2, 141, 0.5);
+}
+
+/* Container */
+.land-listings {
+  display: flex;
+  position: fixed;
+  margin-top: 100px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual Listing Card */
+.listing {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 60vh;
+  
+}
+
+.listing img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.listing:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Listing Title */
+.listing h2 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Description */
+.listing p {
+  color: #555;
+  font-size: 16px;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* Price Styling */
+.listing p:nth-of-type(2) {
+  color: #AF4261;
+  font-weight: bold;
+}
+
+/* Buy Now Button */
+.listing button {
+  background-color: #AF4261;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.listing button:hover {
+  background-color: #C3195D;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+
+
+/* Animation for Background Gradient */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .land-listings {
+    padding: 20px;
+    position: relative;
+    height: fit-content;
+  }
+
+  .listing {
+    padding: 15px;
+    width: 80vw;
+  }
+
+  .listing h2 {
+    font-size: 20px;
+  }
+
+  .listing p {
+    font-size: 14px;
+  }
+
+  .listing button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: translateY(-50px);
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Modal Close Button */
+.modal-content button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #F70776;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button:hover {
+  background-color: #C3195D;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Modal Paragraph */
+.modal-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  word-wrap: break-word;
+  max-width: 90%;
+}
+
+/* Modal Price */
+.modal-content .modal-price {
+  font-size: 22px;
+  font-weight: 600;
+  color: #AF4261;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Modal Button */
+.modal-content .modal-button {
+  background-color: #F70776;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.modal-content .modal-button:hover {
+  background-color: #C3195D;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Chat Button Style */
+.modal-chat-button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #25D366;
+  /* Green color for WhatsApp */
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  /* No underline for link */
+  display: inline-flex;
+  align-items: center;
+  /* Align icon and text vertically */
+  gap: 8px;
+  /* Space between icon and text */
+  transition: background-color 0.3s ease;
+}
+
+.modal-chat-button i {
+  font-size: 18px;
+  /* Icon size */
+}
+
+.modal-chat-button:hover {
+  background-color: #128C7E;
+  /* Darker shade on hover */
+}
+
+/* Animation for Background Gradient */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.penjual-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+.penjual span {
+  margin-left: 8px; /* Spacing antara ikon dan teks */
+}
+
+.penjual  {
+  text-decoration: none;
+  color: #F70776; /* Link color */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: -50%;
+}
+
+.penjual :hover {
+  color: #C3195D;
+}
+
+.penjual-icon {
+  font-size: 24px; /* Ukuran ikon */
+  color: #F70776; /* Warna ikon */
+}
+
+.penjual-icon :hover{
+  color: #C3195D;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}

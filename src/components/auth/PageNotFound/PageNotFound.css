@@ -1,0 +1,55 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #141010;
+  background: linear-gradient(135deg, #f9f9f9, #ececec);
+  gap: 20px; /* Spasi antar elemen */
+  padding: 20px; /* Ruang di sisi layar */
+}
+
+.page-not-found h1 {
+  font-size: 120px;
+  margin: 0;
+  color: #F70776;
+}
+
+.page-not-found .icon-tired {
+  font-size: 150px; /* Ukuran ikon */
+  color: #F70776;
+  animation: bounce 1.5s infinite;
+}
+
+.page-not-found p {
+  font-size: 18px;
+  color: #141010;
+}
+
+.page-not-found a {
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #C3195D;
+  border: 2px solid #C3195D;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.page-not-found a:hover {
+  background-color: #F70776;
+  color: #fff;
+}
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+.login-body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #C3195D, #F70776);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    position: relative;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    /* Mulai dengan opacity 0 untuk efek fade-in */
+    transform: translateY(20px);
+    /* Mulai dengan posisi lebih rendah untuk efek slide-up */
+    animation: fadeIn 0.5s forwards;
+    /* Menambahkan animasi */
+    margin: 0;
+}
+
+.login-body-fit {
+    display: inline-block;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 100px;
+}
+
+
+.login-title-container img {
+    height: 10rem;
+    transition: all 0.3s ease;
+}
+
+.login-title-container img:hover {
+    height: 11rem;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.login-container input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9b1148;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.login-container button:hover {
+    background-color: #680747;
+    transform: scale(1.05);
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #680747;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.login-container p {
+    font-style: italic;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.login-container p.message {
+    background: none;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 15px;
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.regis-container {
+    color: #141010;
+
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+    /* Durasi animasi fade-out */
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
